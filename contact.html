@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<style>
+body{
+    background-image: url('bgs.jpg');
+    background-size: 1800px 1000px;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type=email] {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color:#ef5350;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color:#ef5350;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  
+  padding: 20px;
+}
+</style>
+
+
+</head>
+<body class="d-block w-100 img-fluid" alt="Responsive image"> 
+        <nav class="navbar navbar-expand-xl navbar navbar-dark" style="background-color: #ef5350;position: top: 0;">
+                <a class="navbar-brand" href="index.html">WEEB's Diary</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link" href="biodata.html">About Us</a>
+                    </li>
+                    <li class="nav-item active">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                     </li>
+                     <li class="nav-item">
+                      <button  style="color:#ef5350;background-color:white;border-color:#ef5350; " type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Join Us!
+                      </button>
+               </li>
+
+                  </ul>
+                </div>
+              </nav>
+              <h1 style="color:#ef5350" >Contact Us!</h1>
+              
+              <div class="container">
+                  <form action="action_page.php">
+                      <label style="color:#ef5350" for="fmail">E-mail</label>
+                      <input type="email" id="fmail" name="email" placeholder="your email..">
+                      <small style="color:#ef5350" id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+ 
+
+                    <label style="color:#ef5350" for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label style="color:#ef5350" for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                    <label style="color:#ef5350" for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">China</option>
+                      <option value="australia">France</option>
+                      <option value="canada">Germany</option>
+                      <option value="usa">Indonesia</option>
+                      <option value="australia">Japan</option>
+                      <option value="canada">Korea</option>
+                      <option value="usa">USA</option>
+                    </select>
+                
+                    <label style="color:#ef5350" for="subject">Message</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                
+                    <input type="submit" value="Submit">
+                
+                  </form>
+                </div>
+                
+              
+              
+              
+              <br>
+    <br>
+    <br>
+    <br>
+    <nav class="navbar navbar-expand-xl navbar navbar-dark" style="background-color: #ef5350;position: fixed;
+    bottom: 0;width: 100%;overflow: hidden;height: 13%;">
+      <a class="navbar-brand" href="#">@WEEB's Diary 2019</a>
+      
+    </nav>
+    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Join Us Now!</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<form id="myForm" action="https://formspree.io/lordwman@yahoo.com" method="POST">
+<div class="form-group">
+<label for="exampleInputEmail1">Email address</label>
+<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+<div class="form-group">
+<label for="exampleInputName1">Fullname</label>
+<input type="text" class="form-control" id="exampleInputName1" placeholder="Fullname">
+</div>
+<div class="form-group">
+<label for="exampleInputDate1">Date</label>
+<input type="date" class="form-control" id="exampleInputDate1" placeholder="Date">
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<button type="submit" class="btn btn-primary" form="myForm">Join</button>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
